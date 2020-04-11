@@ -7,6 +7,7 @@ public class Zadanie2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         ArrayList<String> array = new ArrayList<String>();
+        ArrayList<String> arrayUnique = new ArrayList<String>();
 
         while(true)
         {
@@ -18,14 +19,16 @@ public class Zadanie2 {
             }
             else if(array.contains(name))
             {
+                arrayUnique.remove(name);
                 continue;
             }
             else
             {
                 array.add(name);
+                arrayUnique.add(name);
             }
         }
 
-        System.out.println("Liczba unikalnych imion to:" + array.size());
+        System.out.println("Liczba unikalnych imion to:" + arrayUnique.size());
     }
 }
